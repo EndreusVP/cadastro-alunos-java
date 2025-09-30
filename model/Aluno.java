@@ -34,4 +34,17 @@ public class Aluno {
     public String getCurso(){
         return curso;
     }
+    
+    public void todosAlunos(){
+
+    }
+
+    public void adicionar(){
+        
+    }
+
+    public void remover(){
+
+    }
+
 }

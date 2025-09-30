@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Aluno;
@@ -8,6 +9,9 @@ public class cadastro {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
+
+        //criando a lista dos alunos
+        ArrayList<Aluno> listaAlunos = new ArrayList<>();
 
         boolean continuar = true;
 
@@ -24,13 +28,28 @@ public class cadastro {
             int opcao = entrada.nextInt();
             entrada.nextLine(); 
 
+            //testando se o usuario quer continuar
             if (opcao != 0) {
                 switch (opcao) {
+                    //add aluno
                     case 1:
-                        
-                        break;
-                    case 2:
+                        System.out.println("digite o nome do aluno");
+                        String nomeAluno = entrada.nextLine();
+                        System.out.println("digite a idade do aluno");
+                        int idadeAluno = entrada.nextInt();
+                        entrada.nextLine();
+                        System.out.println("digite o curso do aluno");
+                        String cursoAluno = entrada.nextLine();
 
+                        Aluno aluno = new Aluno(nomeAluno, idadeAluno, cursoAluno);
+                        listaAlunos.add(aluno);
+
+                        break;
+                    //listar alunos cadastrados
+                    case 2:
+                        for(int i = 0; i < listaAlunos.size(); i++){
+                            System.out.println(listaAlunos.get(i));
+                        }
                         break;
                     case 3:
                         
