@@ -15,6 +15,12 @@ public class Aluno {
         this.curso = curso;
     }
 
+    //dizendo como deve aparecer o objeto quando for chamado
+    @Override
+    public String toString(){
+        return "Nome: " + this.nome + " Idade: " + this.idade + " Curso: " + this.curso;
+    }
+
     public void setNome(String nome){
         this.nome = nome;
     }
@@ -34,17 +40,4 @@ public class Aluno {
     public String getCurso(){
         return curso;
     }
-    
-    public void todosAlunos(){
-
-    }
-
-    public void adicionar(){
-        
-    }
-
-    public void remover(){
-
-    }
-
 }
