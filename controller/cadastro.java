@@ -52,12 +52,32 @@ public class cadastro {
                         }
                         break;
                     case 3:
+                        System.out.println("digite o nome do aluno");
+                        String resposta = entrada.nextLine();
                         
+                        for (int i = 0; i < listaAlunos.size(); i++ ) {
+                            //pegando os alunos 
+                            Aluno alunoBusca = listaAlunos.get(i);
+                            if (resposta.equals(alunoBusca.getNome())) {
+                                System.out.println(alunoBusca);
+                                break;
+                            }
+                        }
                         break;
                     case 4:
+                        System.out.println("digite o nome do aluno");
+                        String respostaDelete = entrada.nextLine();
 
+                        for(int i = 0; i < listaAlunos.size(); i++){
+                            Aluno alunoDelete = listaAlunos.get(i);
+                            if(respostaDelete.equals(alunoDelete.getNome())){
+                                listaAlunos.remove(i);
+                                System.out.println("aluno removido");
+                            }
+                        }
                         break;
                     default:
+                        System.out.println("opção nao encontrada");
                         break;
                 }
             }else {
